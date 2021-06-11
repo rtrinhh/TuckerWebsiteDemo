@@ -1,0 +1,128 @@
+/* css/animation for the background */
+.container {
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.showcase {
+  background-color: rgba(211,211,211,0.5);
+  color: white;
+  height: 100vh;
+  position: relative;
+}
+
+.showcase:before {
+  content: "";
+  background: url("band1.jpg") no-repeat center center/cover;
+  backface-visibility: hidden;
+  animation-timing-function: ease-in;
+  animation: slide 36s linear infinite 0s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@keyframes slide {
+  24% {
+    background-image: url("class1.jpg"), url("construction1.jpg");
+  }
+
+  36% {
+    background-image: url("construction1.jpg"), url("dance1.jpg");
+  }
+
+  48% {
+    background-image: url("dance1.jpg"), url("football1.jpg");
+  }
+
+  60% {
+    background-image: url("football1.jpg"), url("rotc1.jpg");
+  }
+
+  72% {
+    background-image: url("rotc1.jpg"), url("seniors1.jpg");
+  }
+
+  84% {
+    background-image: url("seniors1.jpg"), url("theatre1.jpg");
+  }
+
+  100% {
+    background-image: url("theatre1.jpg");
+  }
+}
+
+.showcase .showcase-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.showcase h1 {
+  font-size: 65px;
+  font-weight: 900;
+}
+
+.showcase h2 {
+  font-size: 55px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+/* css for bottom navigation bar */
+.bottom-bar {
+  margin: auto;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.bottom-bar-content {
+  list-style: none;
+  display: inline-block;
+  padding: 0px 10px;
+  color: white;
+  font-weight: lighter;
+}
+
+a {
+  color: white;
+}
+
+.bottom-bar-content a:link {
+  text-decoration: none;
+}
+
+.bottom-bar-content a:active {
+  color: orange;
+}
+
+.bottom-bar-content a:hover {
+  color: orange;
+  transition: all 0.5s ease;
+}
+
+#ul-padding {
+ padding: 0px; 
+}
+
+/* Pseudo class for the side menu contents */
+.menu-wrap .menu > div > div > ul > li > a:active {
+  color: orange;
+}
+
+.menu-wrap .menu > div > div > ul > li > a:hover {
+  color: orange;
+  transition: all 0.5s ease;
+}
